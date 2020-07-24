@@ -108,4 +108,14 @@ export default {
     width: 16rem;
   }
 }
+
+.navbar-brand,
+.navbar-brand * {
+  height: auto;
+  min-height: auto;
+}
+
+.navbar.small .navbar-menu {
+  margin-right: 0;
+}
 </style>
