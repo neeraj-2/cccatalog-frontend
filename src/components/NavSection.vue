@@ -1,5 +1,3 @@
-/*eslint eol-last: ["error", "never"]*/
-
 <template>
   <nav :aria-label="$t('header.aria.primary')" class="navbar">
     <div class="navbar-brand">
