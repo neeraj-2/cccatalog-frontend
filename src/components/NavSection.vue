@@ -1,3 +1,5 @@
+/*eslint eol-last: ["error", "never"]*/
+
 <template>
   <nav :aria-label="$t('header.aria.primary')" class="navbar">
     <div class="navbar-brand">
@@ -82,6 +84,14 @@
             <router-link class="navbar-item" to="/feedback">{{
               $t('header.feedback')
             }}</router-link>
+            <a
+              href="https://api.creativecommons.engineering/"
+              target="_blank"
+              rel="noopener"
+              class="navbar-item"
+              >{{ $t('API') }}
+              <i class="icon external-link" />
+            </a>
           </div>
         </div>
         <router-link class="navbar-item" to="/support">{{
