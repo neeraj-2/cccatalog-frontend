@@ -7,8 +7,9 @@
         class="button is-text tiny is-paddingless rating is-shadowless"
         @click="sendSearchRatingEvent(true)"
         v-on:keyup.enter="sendSearchRatingEvent(true)"
-      >
-        {{ $t('browse-page.search-rating.yes') }}
+      ><span class="has-color-tomato">
+          {{ $t('browse-page.search-rating.yes') }}</span
+        >
       </button>
       •
       <button
@@ -17,7 +18,9 @@
         @click="sendSearchRatingEvent(false)"
         v-on:keyup.enter="sendSearchRatingEvent(false)"
       >
-        {{ $t('browse-page.search-rating.no') }}
+        <span class="has-color-tomato">
+          {{ $t('browse-page.search-rating.no') }}</span
+        >
       </button>
     </div>
     <div v-else-if="status == 'SENT'">
