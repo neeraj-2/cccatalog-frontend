@@ -8,7 +8,9 @@
         @click="sendSearchRatingEvent(true)"
         v-on:keyup.enter="sendSearchRatingEvent(true)"
       >
-        {{ $t('browse-page.search-rating.yes') }}
+        <span class="has-color-tomato">
+          {{ $t('browse-page.search-rating.yes') }}</span
+        >
       </button>
       •
       <button
@@ -17,7 +19,9 @@
         @click="sendSearchRatingEvent(false)"
         v-on:keyup.enter="sendSearchRatingEvent(false)"
       >
-        {{ $t('browse-page.search-rating.no') }}
+        <span class="has-color-tomato">
+          {{ $t('browse-page.search-rating.no') }}</span
+        >
       </button>
     </div>
     <div v-else-if="status == 'SENT'">
@@ -30,12 +34,10 @@
 
 <script>
 import { SEND_SEARCH_RATING_EVENT } from '@/store/usage-data-analytics-types'
-
 const Statuses = {
   NOT_SENT: 'NOT_SENT',
   SENT: 'SENT',
 }
-
 export default {
   name: 'search-rating',
   props: ['searchTerm'],
@@ -50,7 +52,6 @@ export default {
         query: this.$props.searchTerm,
         relevant: isRelevant,
       })
-
       this.status = Statuses.SENT
       setTimeout(() => {
         this.status = null
@@ -67,16 +68,13 @@ export default {
   font-size: 0.8rem;
   text-decoration: none;
   text-transform: none;
-
   &:hover {
     background: none;
   }
-
   &:focus {
     background: none;
   }
 }
-
 span {
   vertical-align: middle;
 }
